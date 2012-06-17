@@ -1,0 +1,13 @@
+#paper.pdf
+
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+
+.DS_Store
+.*.swp
+*.bak
+*.old
+*~

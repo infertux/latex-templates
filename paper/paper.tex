@@ -1,0 +1,65 @@
+% 'IEEEtran' is the IEEE's template for white papers / technical reports
+\documentclass[12pt,compsoc]{IEEEtran}
+
+% provide \cite{} to reference entries in the bibliography
+\usepackage[nocompress]{cite}
+
+% provide \includegraphics{} to embed images
+\usepackage[pdftex]{graphicx}
+\graphicspath{{graphics/}} % path to your graphics
+
+% center figure captions
+\usepackage[center]{caption}
+
+\title{Example paper}
+\author{Your Name\thanks{June 17, 2012}}
+
+
+% Here we go!
+\begin{document}
+
+\IEEEcompsoctitleabstractindextext{
+\begin{abstract}
+Blah.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Computer Society, \LaTeX, IEEE.
+\end{IEEEkeywords}}
+
+\maketitle
+
+\IEEEdisplaynotcompsoctitleabstractindextext
+\IEEEpeerreviewmaketitle
+
+
+\section{Introduction}
+\IEEEPARstart{T}{he} introduction must be at least two lines long.
+
+\section{First section}
+\subsection{First subsection}
+Pattern recognition can be used to detect specific region in a frame as illustrated on figure~\ref{fig:face}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5in]{face}
+\caption{The face was automatically detected.}
+\label{fig:face}
+\end{figure}
+
+\section{Second section}
+\emph{SharedMind} allows to make mind maps in a collaborative way~\cite{sharedmind}.
+
+\section{Conclusion}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula vestibulum lorem, quis volutpat quam consectetur id. Proin nisi sem, aliquam quis suscipit non, blandit sed nisi. Duis id fringilla orci. Cras eu elit quam, at imperdiet quam. Nam blandit euismod sapien, sed vulputate nulla consequat ultricies. Nullam vel est malesuada sapien semper aliquam et ac massa. Nunc id sem ligula. Fusce turpis est, fringilla et lobortis eget, tristique eget velit. Aenean dictum ultricies neque, nec malesuada nibh posuere sit amet. Nunc vel mi in mi viverra sagittis. Sed mattis, sapien pretium porttitor blandit, augue sapien hendrerit ipsum, non ornare neque elit vel tortor. Vestibulum nec erat sapien.
+
+Pellentesque laoreet, nibh ut laoreet consequat, magna enim consequat tortor, ut interdum libero justo sit amet lectus. Etiam vehicula tincidunt bibendum. Integer leo lacus, aliquet eu sollicitudin ut, suscipit ut felis. Aliquam risus libero, vulputate quis tincidunt sed, vestibulum ac felis. Maecenas vitae commodo elit. Duis suscipit, dolor nec eleifend luctus, leo mi feugiat turpis, id venenatis dolor urna in orci. Etiam in sapien a lectus dapibus pulvinar. Phasellus ultrices lectus vitae urna blandit dapibus. Curabitur fermentum nisl non lacus fermentum lacinia. Fusce varius leo sit amet dolor tempus vehicula. Fusce sit amet mauris at sem semper sodales a nec sem. Cras porttitor lectus at arcu pulvinar ullamcorper.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae augue ut est bibendum fermentum vel ut mi. Integer malesuada tempor ornare. Vivamus sodales ipsum vel est fermentum malesuada. Ut eros purus, sagittis ac condimentum at, feugiat et tellus. Maecenas sit amet tempor sapien. Vestibulum ac erat turpis. Nullam tellus ipsum, porta quis tristique sed, malesuada ac mauris. Pellentesque ut turpis lectus.
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,bibliography}
+
+\end{document}
+

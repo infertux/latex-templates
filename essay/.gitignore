@@ -1,0 +1,15 @@
+#essay.pdf
+
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.ist
+
+.DS_Store
+.*.swp
+*.bak
+*.old
+*~

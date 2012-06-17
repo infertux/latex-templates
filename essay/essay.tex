@@ -1,0 +1,54 @@
+% 'scrartcl' is KOMA–Script's equivalent of the standard 'article' class.
+% The KOMA-Script bundle provides drop-in replacements for the
+% article/report/book classes with emphasis on typography and versatility.
+\documentclass{scrartcl}
+
+% allow to write non-ASCII characters directly
+\usepackage[utf8]{inputenc}
+
+% provide \url{} and allow breaking lines on hyphens
+\usepackage[hyphens]{url}
+
+% links in your PDF
+\usepackage{hyperref}
+\hypersetup{
+    unicode=true,      % non-Latin characters in Acrobat's bookmarks
+    colorlinks=true,   % false: boxed links; true: colored links
+    linkcolor=black,   % color of internal links
+    citecolor=green,   % color of links to bibliography
+    filecolor=magenta, % color of file links
+    urlcolor=blue      % color of external links
+}
+
+% bibliography
+\bibliographystyle{plain}
+
+% begin paragraphs with an empty line rather than an indent
+%\usepackage[parfill]{parskip}
+
+% wider citations
+\renewcommand*{\dictumwidth}{.75\textwidth}
+
+% document properties
+\author{Your Name}
+\title{Example essay}
+\date{17 June 2012}
+
+
+% Here we go!
+\begin{document}
+\maketitle
+
+\section{First section}
+\subsection{First subsection}
+\dictum[Torvalds, Linus]{See, you not only have to be a good coder to create a system like Linux, you have to be a sneaky bastard too ;-)}
+
+\section{Conclusion}
+Blah~\cite{kr}.
+
+
+\newpage
+\bibliography{bibliography}
+
+\end{document}
+

@@ -1,0 +1,129 @@
+% 'scrreprt' is KOMA–Script's equivalent of standard's 'report' class.
+% The KOMA-Script bundle provides drop-in replacements for the
+% article/report/book classes with emphasis on typography and versatility.
+\documentclass[12pt]{scrreprt} % you may want to add 'twoside' in the options
+
+% use babel package if not writing in English
+% \usepackage[frenchb]{babel}
+
+% allow to write non-ASCII characters directly
+\usepackage[utf8]{inputenc}
+
+% sweet fonts - pick the one you prefer
+\usepackage{libertine}
+% \usepackage[sc]{mathpazo}
+% \usepackage{mathptmx}
+% \usepackage{lmodern}
+
+% provide \cite{} to reference entries in the bibliography
+\usepackage{cite}
+
+% provide \url{} and allow breaking lines on hyphens
+\usepackage[hyphens]{url}
+
+% links in your PDF
+\usepackage{hyperref}
+\hypersetup{
+    unicode=true,      % non-Latin characters in Acrobat's bookmarks
+    colorlinks=true,   % false: boxed links; true: colored links
+    linkcolor=black,   % color of internal links
+    citecolor=green,   % color of links to bibliography
+    filecolor=magenta, % color of file links
+    urlcolor=blue      % color of external links
+}
+
+% provide \includegraphics{} to embed images
+% \usepackage{graphicx}
+% \graphicspath{{graphics/}} % path to your graphics
+
+% if you ever have to use underscores (like in the bibliography)
+% \usepackage{underscore}
+
+% use 'fancyhdr' if you want to customize your headers
+% http://mirror.ctan.org/macros/latex/contrib/fancyhdr/fancyhdr.pdf
+% H: Header; F: Footer
+% E: Even page; O: Odd page; L: Left field; C: Center field; R: Right field
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhead[LE,RO]{\slshape \rightmark}
+% \fancyhead[LO,RE]{\slshape \leftmark}
+% \fancyfoot[C]{\thepage}
+
+% begin paragraphs with an empty line rather than an indent
+%\usepackage[parfill]{parskip}
+
+% allow using color names such as 'Gray', 'OliveGreen', etc.
+% \usepackage[usenames,dvipsnames]{color}
+
+% provides '\lst*' for code listings
+% \usepackage{listings}
+% \lstset{
+%     basicstyle=\footnotesize\ttfamily,
+%     keywordstyle=\color{OliveGreen},
+%     commentstyle=\color{Gray}\itshape,
+%     stringstyle=\color{RawSienna},
+%     showspaces=false,               % show spaces adding particular underscores
+%     showstringspaces=false,         % underline spaces within strings
+%     showtabs=false,                 % show tabs within strings adding particular underscores
+%     frame=single,                   % adds a frame around the code
+%     breaklines=true,                % sets automatic line breaking
+%     breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+% }
+
+% include PDF files
+% \usepackage{pdfpages}
+
+% nice looking keystrokes with \keystroke{}
+% \usepackage{keystroke}
+
+% make complex boxes
+% \usepackage[framemethod=default]{mdframed}
+
+% allow things like dotted/dashed underlining for emphasis
+\usepackage[normalem]{ulem}
+
+% bibliography
+\bibliographystyle{plain}
+
+% glossary
+% https://en.wikibooks.org/wiki/LaTeX/Glossary
+\usepackage[toc]{glossaries}
+\makeglossaries
+\include{glossary}
+% dash underline terms defined in the glossary
+\let\Oldgls\gls \renewcommand{\gls}[1]{\dashuline{\Oldgls{#1}}}
+
+% handy shortcuts
+% \newcommand{\tech}[1]{\emph{#1}}
+% \newcommand{\sql}[1]{\texttt{#1}}
+% \newcommand{\lstSQL}[1]{\lstinline[language=SQL]{#1}}
+% \newcommand{\furl}[1]{\footnote{\url{#1}}}
+
+% document properties
+\author{Your Name}
+\title{Example report}
+\date{17 June 2012}
+
+
+% Here we go!
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter{First chapter}
+\section{First section}
+\subsection{First subsection}
+\subsubsection{First sub-subsection}
+As explained in~\cite{latex:website}, the word \gls{computer} is defined in the glossary.
+
+\subsection{Second subsection}
+And here is an example of book reference~\cite{kr}.
+
+
+\printglossary
+
+\bibliography{bibliography}
+
+\end{document}
+
