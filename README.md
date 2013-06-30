@@ -15,9 +15,8 @@ Install the package `texlive-core` for the essentials or the group `texlive-most
 
 ### Fedora
 
-You probably want to use Jindrich Novy's repository as the version of _TeX Live_ shipped with Fedora is pretty outdated.
-
-More information: https://fedoraproject.org/wiki/Features/TeXLive
+Since Fedora 18, _TeX Live_ 2012 is part of the mainline distribution and can be installed with the package `texlive`.
+Additional packages are available and are usually named `texlive-{package}`.
 
 ### Mac OS
 
